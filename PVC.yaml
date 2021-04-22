@@ -1,0 +1,14 @@
+# PVC for storing dind data
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  labels:
+    app: docker-dind
+  name: docker-dind-data
+  namespace: gitlab-managed-apps
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Gi
