@@ -17,7 +17,7 @@ spec:
         app: docker-dind
     spec:
       containers:
-        - image: mirror.***.com/dind/docker:19.03.13-dind
+        - image: docker:19.03.13-dind  # 如果要支持http的私有容器镜像仓库，需要替换镜像
           name: docker-dind
           env:
             - name: DOCKER_HOST
